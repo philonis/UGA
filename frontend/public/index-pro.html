@@ -60,7 +60,7 @@
       <p class="text-xl text-white/60 mb-8 italic font-light">Black Myth: Wukong</p>
       <p class="text-lg text-white/80 mb-8 leading-relaxed border-l-4 border-red-600 pl-6">中国首款国产 3A 大作。从预告片发布的惊艳到全球媒体的一致赞誉，Steam 在线峰值突破 240 万，UGA 全程记录每一个里程碑节点。</p>
       <div class="flex items-center gap-6">
-        <button class="flex items-center gap-3 bg-white text-black px-8 py-4 rounded-full font-black hover:bg-red-600 hover:text-white transition-all transform hover:scale-105">
+        <button onclick="openVideo('7LTrLdVrXPU')" class="flex items-center gap-3 bg-white text-black px-8 py-4 rounded-full font-black hover:bg-red-600 hover:text-white transition-all transform hover:scale-105 cursor-pointer">
           ▶ 观看评测视频
         </button>
         <div class="flex flex-col">
@@ -86,9 +86,14 @@
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
       <!-- 游戏卡片 1 - 杀戮尖塔 2 -->
-      <div class="group relative bg-[#151518] border border-white/5 hover:border-red-500/50 transition-all duration-500 overflow-hidden cursor-pointer">
-        <div class="aspect-[16/9] overflow-hidden">
+      <div class="group relative bg-[#151518] border border-white/5 hover:border-red-500/50 transition-all duration-500 overflow-hidden">
+        <div class="aspect-[16/9] overflow-hidden relative">
           <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1984530/header.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+          <button onclick="openVideo('Uv7eMlJJKws')" class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+            <div class="bg-red-600 rounded-full w-16 h-16 flex items-center justify-center hover:scale-110 transition-transform">
+              <svg class="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
+            </div>
+          </button>
         </div>
         <div class="p-6">
           <h4 class="text-xl font-bold mb-6 group-hover:text-red-500 transition-colors h-14 line-clamp-2">杀戮尖塔 2</h4>
@@ -104,9 +109,14 @@
         </div>
       </div>
       <!-- 游戏卡片 2 - 黑神话：悟空 -->
-      <div class="group relative bg-[#151518] border border-white/5 hover:border-red-500/50 transition-all duration-500 overflow-hidden cursor-pointer">
-        <div class="aspect-[16/9] overflow-hidden">
+      <div class="group relative bg-[#151518] border border-white/5 hover:border-red-500/50 transition-all duration-500 overflow-hidden">
+        <div class="aspect-[16/9] overflow-hidden relative">
           <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/2358720/header.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+          <button onclick="openVideo('7LTrLdVrXPU')" class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+            <div class="bg-red-600 rounded-full w-16 h-16 flex items-center justify-center hover:scale-110 transition-transform">
+              <svg class="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
+            </div>
+          </button>
         </div>
         <div class="p-6">
           <h4 class="text-xl font-bold mb-6 group-hover:text-red-500 transition-colors h-14 line-clamp-2">黑神话：悟空</h4>
@@ -122,9 +132,14 @@
         </div>
       </div>
       <!-- 游戏卡片 3 - 博德之门 3 -->
-      <div class="group relative bg-[#151518] border border-white/5 hover:border-red-500/50 transition-all duration-500 overflow-hidden cursor-pointer">
-        <div class="aspect-[16/9] overflow-hidden">
+      <div class="group relative bg-[#151518] border border-white/5 hover:border-red-500/50 transition-all duration-500 overflow-hidden">
+        <div class="aspect-[16/9] overflow-hidden relative">
           <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1086940/header.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+          <button onclick="openVideo('mT152H9LJHk')" class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+            <div class="bg-red-600 rounded-full w-16 h-16 flex items-center justify-center hover:scale-110 transition-transform">
+              <svg class="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
+            </div>
+          </button>
         </div>
         <div class="p-6">
           <h4 class="text-xl font-bold mb-6 group-hover:text-red-500 transition-colors h-14 line-clamp-2">博德之门 3</h4>
@@ -140,9 +155,14 @@
         </div>
       </div>
       <!-- 游戏卡片 4 - 赛博朋克 2077 -->
-      <div class="group relative bg-[#151518] border border-white/5 hover:border-red-500/50 transition-all duration-500 overflow-hidden cursor-pointer">
-        <div class="aspect-[16/9] overflow-hidden">
+      <div class="group relative bg-[#151518] border border-white/5 hover:border-red-500/50 transition-all duration-500 overflow-hidden">
+        <div class="aspect-[16/9] overflow-hidden relative">
           <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1091500/header.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+          <button onclick="openVideo('8X2kIfS6fb8')" class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+            <div class="bg-red-600 rounded-full w-16 h-16 flex items-center justify-center hover:scale-110 transition-transform">
+              <svg class="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
+            </div>
+          </button>
         </div>
         <div class="p-6">
           <h4 class="text-xl font-bold mb-6 group-hover:text-red-500 transition-colors h-14 line-clamp-2">赛博朋克 2077</h4>
@@ -383,6 +403,14 @@
     </div>
   </footer>
 
+  <!-- 视频模态框 -->
+  <div id="videoModal" class="fixed inset-0 bg-black/95 z-[100] hidden flex items-center justify-center" onclick="closeVideo()">
+    <div class="relative w-full max-w-5xl aspect-video" onclick="event.stopPropagation()">
+      <button onclick="closeVideo()" class="absolute -top-12 right-0 text-white hover:text-red-500 transition-colors text-4xl font-bold">&times;</button>
+      <div id="videoContainer" class="w-full h-full"></div>
+    </div>
+  </div>
+
   <script>
     // 导航栏滚动效果
     window.addEventListener('scroll', () => {
@@ -391,6 +419,30 @@
         nav.classList.add('bg-[#0a0a0c]/90', 'backdrop-blur-md', 'border-b', 'border-white/10');
       } else {
         nav.classList.remove('bg-[#0a0a0c]/90', 'backdrop-blur-md', 'border-b', 'border-white/10');
+      }
+    });
+
+    // 视频播放功能
+    function openVideo(videoId) {
+      const modal = document.getElementById('videoModal');
+      const container = document.getElementById('videoContainer');
+      container.innerHTML = '<iframe class="w-full h-full" src="https://www.youtube.com/embed/' + videoId + '?autoplay=1&rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeVideo() {
+      const modal = document.getElementById('videoModal');
+      const container = document.getElementById('videoContainer');
+      container.innerHTML = '';
+      modal.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    // ESC 键关闭视频
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeVideo();
       }
     });
   </script>
