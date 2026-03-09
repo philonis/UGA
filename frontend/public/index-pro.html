@@ -405,9 +405,12 @@
 
   <!-- 视频模态框 -->
   <div id="videoModal" class="fixed inset-0 bg-black/95 z-[100] hidden flex items-center justify-center" onclick="closeVideo()">
-    <div class="relative w-full max-w-5xl aspect-video" onclick="event.stopPropagation()">
-      <button onclick="closeVideo()" class="absolute -top-12 right-0 text-white hover:text-red-500 transition-colors text-4xl font-bold">&times;</button>
-      <div id="videoContainer" class="w-full h-full"></div>
+    <div class="relative w-full max-w-5xl px-4" onclick="event.stopPropagation()">
+      <button onclick="closeVideo()" class="absolute -top-12 right-4 text-white hover:text-red-500 transition-colors text-4xl font-bold">&times;</button>
+      <div class="relative w-full" style="padding-bottom: 56.25%;">
+        <iframe id="videoFrame" class="absolute inset-0 w-full h-full rounded-lg" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      <p class="text-center text-white/40 text-sm mt-4">如果视频无法加载，请<a id="videoLink" href="#" target="_blank" class="text-red-500 hover:underline">点击这里在 YouTube 观看</a></p>
     </div>
   </div>
 
@@ -425,16 +428,19 @@
     // 视频播放功能
     function openVideo(videoId) {
       const modal = document.getElementById('videoModal');
-      const container = document.getElementById('videoContainer');
-      container.innerHTML = '<iframe class="w-full h-full" src="https://www.youtube.com/embed/' + videoId + '?autoplay=1&rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+      const frame = document.getElementById('videoFrame');
+      const link = document.getElementById('videoLink');
+      const videoUrl = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&rel=0&modestbranding=1';
+      frame.src = videoUrl;
+      link.href = 'https://www.youtube.com/watch?v=' + videoId;
       modal.classList.remove('hidden');
       document.body.style.overflow = 'hidden';
     }
 
     function closeVideo() {
       const modal = document.getElementById('videoModal');
-      const container = document.getElementById('videoContainer');
-      container.innerHTML = '';
+      const frame = document.getElementById('videoFrame');
+      frame.src = '';
       modal.classList.add('hidden');
       document.body.style.overflow = '';
     }
