@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UGA - 游戏评分网</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            uga: {
+              primary: '#1a1a2e',
+              secondary: '#16213e',
+              accent: '#e94560',
+              highlight: '#0f3460',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-uga-primary text-white min-h-screen">
+  <!-- Header -->
+  <header class="bg-uga-secondary py-4 px-8">
+    <nav class="max-w-7xl mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-uga-accent">UGA</h1>
+      <div class="space-x-6">
+        <a href="#" class="hover:text-uga-accent">首页</a>
+        <a href="#" class="hover:text-uga-accent">热门游戏</a>
+        <a href="#" class="hover:text-uga-accent">发售表</a>
+        <a href="#" class="hover:text-uga-accent">UGA 游戏大奖</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="py-16 px-8">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-4xl font-bold mb-4">游戏全生命周期追踪评价</h2>
+      <p class="text-gray-400 text-lg">
+        中国媒体、KOL、海外媒体评分聚合 · 玩家社区 · UGA 颁奖典礼
+      </p>
+    </div>
+  </section>
+
+  <!-- UGA Awards Banner -->
+  <section class="py-8 px-8 bg-uga-highlight">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <div>
+        <h3 class="text-2xl font-bold">🏆 UGA 游戏大奖</h3>
+        <p class="text-gray-400">组委会 + KOL + 媒体 + 玩家 共同投票</p>
+      </div>
+      <a href="#" class="bg-uga-accent px-6 py-3 rounded-lg hover:opacity-90">
+        立即投票 →
+      </a>
+    </div>
+  </section>
+
+  <!-- Hot Games -->
+  <section class="py-12 px-8">
+    <div class="max-w-7xl mx-auto">
+      <h3 class="text-2xl font-bold mb-6">🔥 热门游戏</h3>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <!-- Game Card 1 -->
+        <a href="#" class="bg-uga-secondary rounded-lg overflow-hidden hover:ring-2 hover:ring-uga-accent">
+          <div class="aspect-video bg-gradient-to-br from-green-600 to-blue-700"></div>
+          <div class="p-4">
+            <h4 class="font-semibold">黑神话：悟空</h4>
+            <div class="flex justify-between mt-2 text-sm">
+              <span class="text-green-400">媒体：92</span>
+              <span class="text-blue-400">KOL：89</span>
+            </div>
+          </div>
+        </a>
+        <!-- Game Card 2 -->
+        <a href="#" class="bg-uga-secondary rounded-lg overflow-hidden hover:ring-2 hover:ring-uga-accent">
+          <div class="aspect-video bg-gradient-to-br from-red-600 to-purple-700"></div>
+          <div class="p-4">
+            <h4 class="font-semibold">博德之门 3</h4>
+            <div class="flex justify-between mt-2 text-sm">
+              <span class="text-green-400">媒体：96</span>
+              <span class="text-blue-400">KOL：94</span>
+            </div>
+          </div>
+        </a>
+        <!-- Game Card 3 -->
+        <a href="#" class="bg-uga-secondary rounded-lg overflow-hidden hover:ring-2 hover:ring-uga-accent">
+          <div class="aspect-video bg-gradient-to-br from-blue-600 to-green-700"></div>
+          <div class="p-4">
+            <h4 class="font-semibold">塞尔达传说：王国之泪</h4>
+            <div class="flex justify-between mt-2 text-sm">
+              <span class="text-green-400">媒体：96</span>
+              <span class="text-blue-400">KOL：93</span>
+            </div>
+          </div>
+        </a>
+        <!-- Game Card 4 -->
+        <a href="#" class="bg-uga-secondary rounded-lg overflow-hidden hover:ring-2 hover:ring-uga-accent">
+          <div class="aspect-video bg-gradient-to-br from-yellow-600 to-red-700"></div>
+          <div class="p-4">
+            <h4 class="font-semibold">赛博朋克 2077</h4>
+            <div class="flex justify-between mt-2 text-sm">
+              <span class="text-green-400">媒体：86</span>
+              <span class="text-blue-400">KOL：88</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Release Schedule -->
+  <section class="py-12 px-8 bg-uga-secondary">
+    <div class="max-w-7xl mx-auto">
+      <h3 class="text-2xl font-bold mb-6">📅 发售表</h3>
+      <div class="space-y-4">
+        <div class="flex justify-between items-center bg-uga-primary p-4 rounded-lg">
+          <span class="text-uga-accent font-mono">03-15</span>
+          <span>龙之信条 2</span>
+          <span class="text-gray-400 text-sm">PC/PS5/Xbox</span>
+        </div>
+        <div class="flex justify-between items-center bg-uga-primary p-4 rounded-lg">
+          <span class="text-uga-accent font-mono">03-20</span>
+          <span>浪人崛起</span>
+          <span class="text-gray-400 text-sm">PS5</span>
+        </div>
+        <div class="flex justify-between items-center bg-uga-primary p-4 rounded-lg">
+          <span class="text-uga-accent font-mono">03-25</span>
+          <span>星空</span>
+          <span class="text-gray-400 text-sm">PC/Xbox</span>
+        </div>
+        <div class="flex justify-between items-center bg-uga-primary p-4 rounded-lg">
+          <span class="text-uga-accent font-mono">04-01</span>
+          <span>哈迪斯 2</span>
+          <span class="text-gray-400 text-sm">PC</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 px-8 border-t border-gray-800">
+    <div class="max-w-7xl mx-auto text-center text-gray-500">
+      <p>UGA 游戏评分网 © 2024 - 游戏全生命周期追踪评价平台</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <title>UGA 游戏大奖 - UGA.ARCHIVE</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { background: #0a0a0c; color: white; overflow-x: hidden; }
+    ::selection { background: #dc2626; color: white; }
+  </style>
+</head>
+<body>
+  <!-- 导航栏 -->
+  <nav class="fixed top-0 w-full z-50 bg-[#0a0a0c]/90 backdrop-blur-md border-b border-white/10 px-6 py-4 flex items-center justify-between">
+    <div class="flex items-center gap-12">
+      <a href="/index-pro.html" class="text-3xl font-black tracking-tighter italic text-red-600">UGA<span class="text-white not-italic">.ARCHIVE</span></a>
+      <div class="hidden md:flex gap-8 text-sm font-bold tracking-widest uppercase">
+        <a href="/index-pro.html#hot-games" class="hover:text-red-500 transition-colors">热门游戏</a>
+        <a href="/release.html" class="hover:text-red-500 transition-colors">发售表</a>
+        <a href="#" class="hover:text-red-500 transition-colors border-b-2 border-red-500 pb-1 flex items-center gap-1">🏆 UGA 大奖</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="pt-32 pb-24 px-12 bg-gradient-to-b from-red-900/20 to-transparent">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="text-8xl mb-6">🏆</div>
+      <h1 class="text-7xl font-black mb-4 italic uppercase">UGA Game Awards</h1>
+      <p class="text-2xl text-white/40 mb-8">2025 年度游戏评选</p>
+      <div class="flex justify-center gap-4 text-sm font-bold tracking-widest">
+        <span class="text-red-500">提名：2025.11.20</span>
+        <span class="text-white/40">|</span>
+        <span class="text-red-500">投票：2025.12.01-12.31</span>
+        <span class="text-white/40">|</span>
+        <span class="text-red-500">颁奖：2026.01.15</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 投票说明 -->
+  <section class="px-12 mb-24">
+    <div class="max-w-4xl mx-auto bg-[#151518] p-8 rounded-2xl border border-white/10">
+      <h2 class="text-2xl font-black mb-6">📋 投票规则</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div>
+          <h3 class="font-bold mb-4 text-red-500">投票权重</h3>
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span>组委会</span>
+              <span class="font-bold text-red-500">40%</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span>KOL</span>
+              <span class="font-bold text-orange-500">30%</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span>媒体</span>
+              <span class="font-bold text-yellow-500">20%</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span>玩家</span>
+              <span class="font-bold text-green-500">10%</span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h3 class="font-bold mb-4 text-red-500">评选维度</h3>
+          <ul class="space-y-2 text-white/60">
+            <li>✓ 游戏品质与创新</li>
+            <li>✓ 叙事与艺术表现</li>
+            <li>✓ 技术实现与优化</li>
+            <li>✓ 玩家口碑与影响力</li>
+            <li>✓ 长线运营表现</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 奖项分类 -->
+  <section class="px-12 mb-24">
+    <div class="max-w-6xl mx-auto">
+      <!-- 年度最佳游戏 -->
+      <div class="mb-24">
+        <h2 class="text-4xl font-black mb-12 text-center">
+          <span class="text-red-600">年度最佳游戏</span>
+          <span class="text-white/40 text-2xl"> / GAME OF THE YEAR</span>
+        </h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <!-- 提名 1 -->
+          <div class="bg-[#151518] rounded-xl overflow-hidden border border-white/5 hover:border-red-500/50 transition-all group cursor-pointer">
+            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/2358720/header.jpg" class="w-full aspect-video object-cover group-hover:scale-105 transition-transform" />
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">黑神话：悟空</h3>
+              <p class="text-white/40 text-sm mb-4">Game Science</p>
+              <div class="flex items-center justify-between">
+                <span class="text-xs text-white/40">动作 RPG / 西游</span>
+                <button class="bg-red-600 hover:bg-red-700 px-4 py-2 rounded font-bold text-sm transition-all">投票</button>
+              </div>
+            </div>
+          </div>
+          <!-- 提名 2 -->
+          <div class="bg-[#151518] rounded-xl overflow-hidden border border-white/5 hover:border-red-500/50 transition-all group cursor-pointer">
+            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1086940/header.jpg" class="w-full aspect-video object-cover group-hover:scale-105 transition-transform" />
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">博德之门 3</h3>
+              <p class="text-white/40 text-sm mb-4">Larian Studios</p>
+              <div class="flex items-center justify-between">
+                <span class="text-xs text-white/40">RPG / DND</span>
+                <button class="bg-red-600 hover:bg-red-700 px-4 py-2 rounded font-bold text-sm transition-all">投票</button>
+              </div>
+            </div>
+          </div>
+          <!-- 提名 3 -->
+          <div class="bg-[#151518] rounded-xl overflow-hidden border border-white/5 hover:border-red-500/50 transition-all group cursor-pointer">
+            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1593500/header.jpg" class="w-full aspect-video object-cover group-hover:scale-105 transition-transform" />
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">塞尔达传说：王国之泪</h3>
+              <p class="text-white/40 text-sm mb-4">Nintendo</p>
+              <div class="flex items-center justify-between">
+                <span class="text-xs text-white/40">冒险 / 开放世界</span>
+                <button class="bg-red-600 hover:bg-red-700 px-4 py-2 rounded font-bold text-sm transition-all">投票</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 最佳叙事 -->
+      <div class="mb-24">
+        <h2 class="text-4xl font-black mb-12 text-center">
+          <span class="text-red-600">最佳叙事</span>
+          <span class="text-white/40 text-2xl"> / BEST NARRATIVE</span>
+        </h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="bg-[#151518] rounded-xl overflow-hidden border border-white/5 hover:border-red-500/50 transition-all group cursor-pointer">
+            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1091500/header.jpg" class="w-full aspect-video object-cover group-hover:scale-105 transition-transform" />
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">赛博朋克 2077</h3>
+              <p class="text-white/40 text-sm mb-4">CD Projekt Red</p>
+              <button class="w-full bg-red-600 hover:bg-red-700 px-4 py-2 rounded font-bold text-sm transition-all mt-4">投票</button>
+            </div>
+          </div>
+          <div class="bg-[#151518] rounded-xl overflow-hidden border border-white/5 hover:border-red-500/50 transition-all group cursor-pointer">
+            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1174180/header.jpg" class="w-full aspect-video object-cover group-hover:scale-105 transition-transform" />
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">红霞岛</h3>
+              <p class="text-white/40 text-sm mb-4">Arkane Studios</p>
+              <button class="w-full bg-red-600 hover:bg-red-700 px-4 py-2 rounded font-bold text-sm transition-all mt-4">投票</button>
+            </div>
+          </div>
+          <div class="bg-[#151518] rounded-xl overflow-hidden border border-white/5 hover:border-red-500/50 transition-all group cursor-pointer">
+            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1237970/header.jpg" class="w-full aspect-video object-cover group-hover:scale-105 transition-transform" />
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">泰坦陨落 2</h3>
+              <p class="text-white/40 text-sm mb-4">Respawn Entertainment</p>
+              <button class="w-full bg-red-600 hover:bg-red-700 px-4 py-2 rounded font-bold text-sm transition-all mt-4">投票</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 最佳艺术指导 -->
+      <div class="mb-24">
+        <h2 class="text-4xl font-black mb-12 text-center">
+          <span class="text-red-600">最佳艺术指导</span>
+          <span class="text-white/40 text-2xl"> / BEST ART DIRECTION</span>
+        </h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="bg-[#151518] rounded-xl overflow-hidden border border-white/5 hover:border-red-500/50 transition-all group cursor-pointer">
+            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/2358720/header.jpg" class="w-full aspect-video object-cover group-hover:scale-105 transition-transform" />
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">黑神话：悟空</h3>
+              <p class="text-white/40 text-sm mb-4">Game Science</p>
+              <button class="w-full bg-red-600 hover:bg-red-700 px-4 py-2 rounded font-bold text-sm transition-all mt-4">投票</button>
+            </div>
+          </div>
+          <div class="bg-[#151518] rounded-xl overflow-hidden border border-white/5 hover:border-red-500/50 transition-all group cursor-pointer">
+            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1593500/header.jpg" class="w-full aspect-video object-cover group-hover:scale-105 transition-transform" />
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">塞尔达传说：王国之泪</h3>
+              <p class="text-white/40 text-sm mb-4">Nintendo</p>
+              <button class="w-full bg-red-600 hover:bg-red-700 px-4 py-2 rounded font-bold text-sm transition-all mt-4">投票</button>
+            </div>
+          </div>
+          <div class="bg-[#151518] rounded-xl overflow-hidden border border-white/5 hover:border-red-500/50 transition-all group cursor-pointer">
+            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1817070/header.jpg" class="w-full aspect-video object-cover group-hover:scale-105 transition-transform" />
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">漫威蜘蛛侠 2</h3>
+              <p class="text-white/40 text-sm mb-4">Insomniac Games</p>
+              <button class="w-full bg-red-600 hover:bg-red-700 px-4 py-2 rounded font-bold text-sm transition-all mt-4">投票</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 提交投票 -->
+  <section class="px-12 mb-24">
+    <div class="max-w-2xl mx-auto text-center">
+      <button class="bg-red-600 hover:bg-red-700 px-16 py-6 rounded-full font-black text-xl transition-all transform hover:scale-105">
+        提交我的投票
+      </button>
+      <p class="text-white/40 text-sm mt-4">每个奖项只能投一票，提交前请确认</p>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="bg-[#050505] py-12 px-12 border-t border-white/5">
+    <p class="text-center text-white/20 text-sm">© 2025 UGA.ARCHIVE - 游戏全生命周期追踪评价平台</p>
+  </footer>
+</body>
+</html>

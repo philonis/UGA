@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <title>UGA.ARCHIVE - 游戏评分网</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          animation: {
+            'pulse': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background: #0a0a0c; color: white; overflow-x: hidden; }
+    ::selection { background: #dc2626; color: white; }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #0a0a0c; }
+    ::-webkit-scrollbar-thumb { background: #dc2626; border-radius: 3px; }
+  </style>
+</head>
+<body>
+  <!-- 导航栏 -->
+  <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 px-6 py-4 flex items-center justify-between">
+    <div class="flex items-center gap-12">
+      <h1 class="text-3xl font-black tracking-tighter italic text-red-600">UGA<span class="text-white not-italic">.ARCHIVE</span></h1>
+      <div class="hidden md:flex gap-8 text-sm font-bold tracking-widest uppercase">
+        <a href="#" class="hover:text-red-500 transition-colors border-b-2 border-red-500 pb-1">热门游戏</a>
+        <a href="#" class="hover:text-red-500 transition-colors">发售表</a>
+        <a href="#" class="hover:text-red-500 transition-colors flex items-center gap-1">🏆 UGA 大奖</a>
+      </div>
+    </div>
+    <div class="flex items-center gap-6">
+      <div class="relative hidden lg:block">
+        <input type="text" placeholder="搜索游戏、KOL、评测..." class="bg-white/5 border border-white/10 rounded-full py-2 px-6 w-64 text-sm focus:outline-none focus:ring-2 focus:ring-red-500/50 transition-all" />
+      </div>
+      <button class="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-sm font-bold text-sm transition-all shadow-lg shadow-red-600/20 uppercase">登录</button>
+    </div>
+  </nav>
+
+  <!-- 英雄位 -->
+  <section class="relative h-[90vh] overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/2358720/library_hero.jpg" class="w-full h-full object-cover scale-105" />
+      <div class="absolute inset-0 bg-gradient-to-r from-[#0a0a0c] via-[#0a0a0c]/60 to-transparent"></div>
+    </div>
+    <div class="absolute bottom-32 left-12 max-w-2xl">
+      <div class="flex gap-2 mb-4">
+        <span class="bg-red-600/20 border border-red-600/40 text-red-500 text-[10px] font-bold px-2 py-1 rounded tracking-widest">动作</span>
+        <span class="bg-red-600/20 border border-red-600/40 text-red-500 text-[10px] font-bold px-2 py-1 rounded tracking-widest">西游</span>
+        <span class="bg-red-600/20 border border-red-600/40 text-red-500 text-[10px] font-bold px-2 py-1 rounded tracking-widest">国产 3A</span>
+      </div>
+      <h2 class="text-7xl font-black mb-2 tracking-tight leading-none uppercase">黑神话：悟空</h2>
+      <p class="text-xl text-white/60 mb-8 italic font-light">Black Myth: Wukong</p>
+      <p class="text-lg text-white/80 mb-8 leading-relaxed border-l-4 border-red-600 pl-6">中国首款国产 3A 大作。从预告片发布的惊艳到全球媒体的一致赞誉，Steam 在线峰值突破 240 万，UGA 全程记录每一个里程碑节点。</p>
+      <div class="flex items-center gap-6">
+        <button class="flex items-center gap-3 bg-white text-black px-8 py-4 rounded-full font-black hover:bg-red-600 hover:text-white transition-all transform hover:scale-105">
+          ▶ 观看评测视频
+        </button>
+        <div class="flex flex-col">
+          <span class="text-xs text-white/40 font-bold uppercase tracking-widest">UGA 综合评分</span>
+          <span class="text-4xl font-black text-red-500">9.1</span>
+        </div>
+      </div>
+    </div>
+    <div class="absolute bottom-12 right-12 flex gap-4">
+      <button class="w-24 h-1 bg-red-600 transition-all"></button>
+      <button class="w-12 h-1 bg-white opacity-30 transition-all"></button>
+    </div>
+  </section>
+
+  <!-- 热门游戏 -->
+  <section class="py-24 px-12 bg-[#0d0d0f]">
+    <div class="flex justify-between items-end mb-12">
+      <div>
+        <h3 class="text-4xl font-black flex items-center gap-4 italic">📈 Steam 热销榜 <span class="text-white/10 not-italic">/ TOP SELLERS</span></h3>
+        <div class="h-1 w-24 bg-red-600 mt-2"></div>
+      </div>
+      <a href="#" class="text-sm font-bold text-white/40 hover:text-white transition-colors flex items-center gap-1 group">查看全部 →</a>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <!-- 游戏卡片 1 - 杀戮尖塔 2 -->
+      <div class="group relative bg-[#151518] border border-white/5 hover:border-red-500/50 transition-all duration-500 overflow-hidden cursor-pointer">
+        <div class="aspect-[16/9] overflow-hidden">
+          <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1984530/header.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+        </div>
+        <div class="p-6">
+          <h4 class="text-xl font-bold mb-6 group-hover:text-red-500 transition-colors h-14 line-clamp-2">杀戮尖塔 2</h4>
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-[10px] text-white/40 font-bold uppercase">Steam 在线</p>
+              <p class="text-[10px] text-white/40">峰值 43 万</p>
+            </div>
+            <div class="relative w-16 h-16 rounded-full border-4 border-red-500 flex items-center justify-center">
+              <span class="text-2xl font-black">9.5</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 游戏卡片 2 - 黑神话：悟空 -->
+      <div class="group relative bg-[#151518] border border-white/5 hover:border-red-500/50 transition-all duration-500 overflow-hidden cursor-pointer">
+        <div class="aspect-[16/9] overflow-hidden">
+          <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/2358720/header.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+        </div>
+        <div class="p-6">
+          <h4 class="text-xl font-bold mb-6 group-hover:text-red-500 transition-colors h-14 line-clamp-2">黑神话：悟空</h4>
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-[10px] text-white/40 font-bold uppercase">好评率</p>
+              <p class="text-[10px] text-white/40">96% 好评如潮</p>
+            </div>
+            <div class="relative w-16 h-16 rounded-full border-4 border-red-500 flex items-center justify-center">
+              <span class="text-2xl font-black">9.1</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 游戏卡片 3 - 博德之门 3 -->
+      <div class="group relative bg-[#151518] border border-white/5 hover:border-red-500/50 transition-all duration-500 overflow-hidden cursor-pointer">
+        <div class="aspect-[16/9] overflow-hidden">
+          <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1086940/header.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+        </div>
+        <div class="p-6">
+          <h4 class="text-xl font-bold mb-6 group-hover:text-red-500 transition-colors h-14 line-clamp-2">博德之门 3</h4>
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-[10px] text-white/40 font-bold uppercase">TGA 2023</p>
+              <p class="text-[10px] text-white/40">年度最佳游戏</p>
+            </div>
+            <div class="relative w-16 h-16 rounded-full border-4 border-red-500 flex items-center justify-center">
+              <span class="text-2xl font-black">9.6</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 游戏卡片 4 - 赛博朋克 2077 -->
+      <div class="group relative bg-[#151518] border border-white/5 hover:border-red-500/50 transition-all duration-500 overflow-hidden cursor-pointer">
+        <div class="aspect-[16/9] overflow-hidden">
+          <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1091500/header.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+        </div>
+        <div class="p-6">
+          <h4 class="text-xl font-bold mb-6 group-hover:text-red-500 transition-colors h-14 line-clamp-2">赛博朋克 2077</h4>
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-[10px] text-white/40 font-bold uppercase">2.0 版本</p>
+              <p class="text-[10px] text-white/40">口碑逆转</p>
+            </div>
+            <div class="relative w-16 h-16 rounded-full border-4 border-orange-500 flex items-center justify-center">
+              <span class="text-2xl font-black">8.6</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 长线追踪 -->
+  <section class="py-24 px-12 relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-1/3 h-full bg-red-600/5 -skew-x-12 transform translate-x-24"></div>
+    <div class="grid lg:grid-cols-2 gap-20 items-center">
+      <div>
+        <h3 class="text-5xl font-black leading-tight mb-8 uppercase tracking-tighter">独家<span class="text-red-600">全生命周期</span><br/>追踪评价体系</h3>
+        <p class="text-white/60 text-lg mb-10 leading-relaxed border-l-2 border-white/10 pl-8 italic">"我们不只关注发售当下的那一刻，我们记录游戏从跳票、宣发、翻车到最后'救赎'的每一个版本细节。UGA 旨在建立属于中国玩家的行业白皮书。"</p>
+        <div class="space-y-6">
+          <div class="flex items-center gap-6 group cursor-default">
+            <span class="text-2xl font-black text-white/10 group-hover:text-red-600 transition-colors">01</span>
+            <div class="h-px w-8 bg-white/10"></div>
+            <span class="text-lg font-bold group-hover:translate-x-2 transition-transform">发售前：宣发透过度监测</span>
+          </div>
+          <div class="flex items-center gap-6 group cursor-default">
+            <span class="text-2xl font-black text-white/10 group-hover:text-red-600 transition-colors">02</span>
+            <div class="h-px w-8 bg-white/10"></div>
+            <span class="text-lg font-bold group-hover:translate-x-2 transition-transform">发售时：首发质量及优化评估</span>
+          </div>
+          <div class="flex items-center gap-6 group cursor-default">
+            <span class="text-2xl font-black text-white/10 group-hover:text-red-600 transition-colors">03</span>
+            <div class="h-px w-8 bg-white/10"></div>
+            <span class="text-lg font-bold group-hover:translate-x-2 transition-transform">发售后：更新维护与社区响应</span>
+          </div>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="bg-[#151518] p-8 border border-white/10 rounded-xl relative z-10">
+          <div class="flex justify-between items-center mb-6">
+            <span class="text-xs font-bold tracking-[0.2em] text-white/40 uppercase">Project Dashboard</span>
+            <span class="text-red-500 flex items-center gap-1 text-[10px] font-bold"><div class="w-1.5 h-1.5 bg-red-500 rounded-full animate-pulse"></div> LIVE TRACKING</span>
+          </div>
+          <div class="space-y-4">
+            <div class="bg-black/40 p-4 rounded border border-white/5">
+              <p class="text-sm font-bold mb-2">Marketing Campaign</p>
+              <div class="h-2 bg-white/5 rounded-full overflow-hidden"><div class="h-full bg-red-600 w-3/4"></div></div>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="bg-black/40 p-4 rounded border border-white/5">
+                <p class="text-[10px] text-white/40 uppercase font-bold">Total Exposure</p>
+                <p class="text-2xl font-black">2.4M</p>
+              </div>
+              <div class="bg-black/40 p-4 rounded border border-white/5">
+                <p class="text-[10px] text-white/40 uppercase font-bold">Steam Reviews</p>
+                <p class="text-2xl font-black">94% <span class="text-xs text-green-500 font-medium">↑</span></p>
+              </div>
+            </div>
+            <div class="bg-red-600/10 p-4 rounded border border-red-500/20">
+              <p class="text-xs text-red-500 font-bold mb-1 italic">组委会最新结论：</p>
+              <p class="text-xs text-white/80 leading-relaxed">近期 1.04 补丁大幅修复了性能 Bug，长线追踪评级上调至 [A+]。</p>
+            </div>
+          </div>
+        </div>
+        <div class="absolute -top-4 -right-4 w-full h-full bg-white/5 rounded-xl -z-0"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 发售表 -->
+  <section class="py-24 px-12 bg-[#0a0a0c] border-t border-white/5">
+    <div class="flex justify-between items-end mb-12">
+      <h3 class="text-4xl font-black flex items-center gap-4 italic">📅 Steam 发售表 <span class="text-white/10 not-italic">/ COMING SOON</span></h3>
+    </div>
+    <div class="flex flex-col md:flex-row gap-8">
+      <div class="flex-1 group">
+        <div class="text-6xl font-black text-white/5 mb-4 group-hover:text-red-600 transition-colors">03.15</div>
+        <div class="bg-[#151518] p-6 border-l-4 border-red-600 hover:bg-[#1a1a1e] transition-all">
+          <p class="text-xs text-white/40 font-bold mb-2 uppercase">PC/PS5/Xbox</p>
+          <h5 class="text-xl font-bold mb-4">龙之信条 2</h5>
+          <div class="flex gap-2">
+            <span class="text-[10px] border border-white/20 px-2 py-0.5 rounded text-white/60 uppercase">动作 RPG</span>
+            <span class="text-[10px] border border-white/20 px-2 py-0.5 rounded text-white/60 uppercase">开放世界</span>
+          </div>
+        </div>
+      </div>
+      <div class="flex-1 group">
+        <div class="text-6xl font-black text-white/5 mb-4 group-hover:text-red-600 transition-colors">03.20</div>
+        <div class="bg-[#151518] p-6 border-l-4 border-red-600 hover:bg-[#1a1a1e] transition-all">
+          <p class="text-xs text-white/40 font-bold mb-2 uppercase">PS5</p>
+          <h5 class="text-xl font-bold mb-4">浪人崛起</h5>
+          <div class="flex gap-2">
+            <span class="text-[10px] border border-white/20 px-2 py-0.5 rounded text-white/60 uppercase">动作</span>
+            <span class="text-[10px] border border-white/20 px-2 py-0.5 rounded text-white/60 uppercase">Team Ninja</span>
+          </div>
+        </div>
+      </div>
+      <div class="flex-1 group">
+        <div class="text-6xl font-black text-white/5 mb-4 group-hover:text-red-600 transition-colors">03.25</div>
+        <div class="bg-[#151518] p-6 border-l-4 border-red-600 hover:bg-[#1a1a1e] transition-all">
+          <p class="text-xs text-white/40 font-bold mb-2 uppercase">PC/Xbox</p>
+          <h5 class="text-xl font-bold mb-4">星空 Shattered Space</h5>
+          <div class="flex gap-2">
+            <span class="text-[10px] border border-white/20 px-2 py-0.5 rounded text-white/60 uppercase">RPG</span>
+            <span class="text-[10px] border border-white/20 px-2 py-0.5 rounded text-white/60 uppercase">DLC</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- UGA 大奖 -->
+  <section class="py-24 px-12 mb-24 relative overflow-hidden">
+    <!-- 背景装饰 -->
+    <div class="absolute inset-0 bg-gradient-to-br from-red-900/40 via-[#0a0a0c] to-[#0a0a0c]"></div>
+    <div class="absolute top-0 right-0 w-96 h-96 bg-red-600/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 w-96 h-96 bg-red-900/10 rounded-full blur-3xl"></div>
+    
+    <div class="relative z-10 grid lg:grid-cols-2 gap-16 items-center">
+      <div>
+        <div class="flex items-center gap-4 mb-8">
+          <div class="text-6xl">🏆</div>
+          <div>
+            <div class="bg-red-600 text-white inline-block px-4 py-1 font-black text-xs uppercase tracking-widest italic">2025 UGA GAME AWARDS</div>
+            <p class="text-white/40 text-sm mt-1 font-bold tracking-[0.2em]">ULTIMATE GAME ARCHIVE</p>
+          </div>
+        </div>
+        <h3 class="text-6xl font-black mb-6 leading-none italic uppercase">UGA 游戏大奖<br/><span class="text-red-600">投票现已开启</span></h3>
+        <p class="text-white/60 text-lg mb-8 leading-relaxed">参与组委会、KOL、媒体与玩家的加权投票，见证年度行业标杆的诞生。</p>
+        
+        <!-- 权重说明 -->
+        <div class="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10 mb-8">
+          <p class="text-xs font-bold text-white/40 uppercase mb-4">投票权重分配</p>
+          <div class="space-y-3">
+            <div class="flex items-center gap-4">
+              <span class="text-sm font-bold w-24">组委会</span>
+              <div class="flex-1 h-2 bg-white/5 rounded-full overflow-hidden">
+                <div class="h-full bg-red-600 w-[40%]"></div>
+              </div>
+              <span class="text-sm font-bold text-red-500">40%</span>
+            </div>
+            <div class="flex items-center gap-4">
+              <span class="text-sm font-bold w-24">KOL</span>
+              <div class="flex-1 h-2 bg-white/5 rounded-full overflow-hidden">
+                <div class="h-full bg-orange-500 w-[30%]"></div>
+              </div>
+              <span class="text-sm font-bold text-orange-500">30%</span>
+            </div>
+            <div class="flex items-center gap-4">
+              <span class="text-sm font-bold w-24">媒体</span>
+              <div class="flex-1 h-2 bg-white/5 rounded-full overflow-hidden">
+                <div class="h-full bg-yellow-500 w-[20%]"></div>
+              </div>
+              <span class="text-sm font-bold text-yellow-500">20%</span>
+            </div>
+            <div class="flex items-center gap-4">
+              <span class="text-sm font-bold w-24">玩家</span>
+              <div class="flex-1 h-2 bg-white/5 rounded-full overflow-hidden">
+                <div class="h-full bg-green-500 w-[10%]"></div>
+              </div>
+              <span class="text-sm font-bold text-green-500">10%</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="flex gap-4">
+          <a href="/release.html" class="bg-white text-red-600 px-8 py-4 rounded font-black transition-all uppercase italic flex items-center gap-2">
+            查看发售表 <span>→</span>
+          </a>
+          <a href="/uga-awards.html" class="border-2 border-white/30 text-white px-8 py-4 rounded font-black hover:border-white transition-all uppercase italic flex items-center gap-2">
+            UGA 大奖投票 <span>→</span>
+          </a>
+        </div>
+      </div>
+      
+      <!-- 提名游戏展示 -->
+      <div class="relative">
+        <div class="grid grid-cols-2 gap-4">
+          <div class="bg-[#151518] p-4 rounded-xl border border-white/5 hover:border-red-500/50 transition-all group">
+            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/2358720/header.jpg" class="w-full aspect-video object-cover rounded-lg mb-3 group-hover:scale-105 transition-transform" />
+            <p class="text-xs font-bold text-white/40 uppercase mb-1">年度最佳游戏</p>
+            <p class="font-bold">黑神话：悟空</p>
+          </div>
+          <div class="bg-[#151518] p-4 rounded-xl border border-white/5 hover:border-red-500/50 transition-all group">
+            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1086940/header.jpg" class="w-full aspect-video object-cover rounded-lg mb-3 group-hover:scale-105 transition-transform" />
+            <p class="text-xs font-bold text-white/40 uppercase mb-1">年度最佳游戏</p>
+            <p class="font-bold">博德之门 3</p>
+          </div>
+          <div class="bg-[#151518] p-4 rounded-xl border border-white/5 hover:border-red-500/50 transition-all group">
+            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1091500/header.jpg" class="w-full aspect-video object-cover rounded-lg mb-3 group-hover:scale-105 transition-transform" />
+            <p class="text-xs font-bold text-white/40 uppercase mb-1">最佳叙事</p>
+            <p class="font-bold">赛博朋克 2077</p>
+          </div>
+          <div class="bg-[#151518] p-4 rounded-xl border border-white/5 hover:border-red-500/50 transition-all group">
+            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/814380/header.jpg" class="w-full aspect-video object-cover rounded-lg mb-3 group-hover:scale-105 transition-transform" />
+            <p class="text-xs font-bold text-white/40 uppercase mb-1">最佳艺术</p>
+            <p class="font-bold">塞尔达传说：王国之泪</p>
+          </div>
+        </div>
+        <p class="text-center text-xs font-bold text-white/40 uppercase mt-6 tracking-[0.2em]">提名揭晓：2025.11.20 · 颁奖典礼：2026.01.15</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="bg-[#050505] py-20 px-12 border-t border-white/5">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-12 mb-16">
+      <div class="col-span-2">
+        <h1 class="text-3xl font-black italic text-red-600 mb-6 uppercase">UGA<span class="text-white not-italic">.ARCHIVE</span></h1>
+        <p class="text-white/40 max-w-sm text-sm leading-relaxed mb-6">UGA 游戏行业评价体系是专为游戏全生命周期设计的评价标准。我们整合媒体、KOL 与深度玩家视角，构建公平、客观、长线的游戏数据库。</p>
+      </div>
+      <div>
+        <h6 class="font-black mb-6 uppercase text-sm tracking-widest">快速链接</h6>
+        <ul class="space-y-4 text-sm text-white/40 font-medium">
+          <li><a href="#" class="hover:text-red-500 transition-colors">热门游戏排行</a></li>
+          <li><a href="#" class="hover:text-red-500 transition-colors">新游发售预报</a></li>
+          <li><a href="#" class="hover:text-red-500 transition-colors">UGA 评选规则</a></li>
+          <li><a href="#" class="hover:text-red-500 transition-colors">组委会白皮书</a></li>
+        </ul>
+      </div>
+      <div>
+        <h6 class="font-black mb-6 uppercase text-sm tracking-widest">联系我们</h6>
+        <ul class="space-y-4 text-sm text-white/40 font-medium">
+          <li><a href="#" class="hover:text-red-500 transition-colors">商务合作 (KOL/Media)</a></li>
+          <li><a href="#" class="hover:text-red-500 transition-colors">隐私政策</a></li>
+          <li><a href="#" class="hover:text-red-500 transition-colors">关于 UGA</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/5 text-[10px] text-white/20 font-bold tracking-[0.3em] uppercase">
+      <p>© 2025 ULTIMATE GAME ARCHIVE. ALL RIGHTS RESERVED.</p>
+      <p class="mt-4 md:mt-0">MADE FOR THE PLAYERS BY THE ARCHIVISTS</p>
+    </div>
+  </footer>
+
+  <script>
+    // 导航栏滚动效果
+    window.addEventListener('scroll', () => {
+      const nav = document.getElementById('navbar');
+      if (window.scrollY > 50) {
+        nav.classList.add('bg-[#0a0a0c]/90', 'backdrop-blur-md', 'border-b', 'border-white/10');
+      } else {
+        nav.classList.remove('bg-[#0a0a0c]/90', 'backdrop-blur-md', 'border-b', 'border-white/10');
+      }
+    });
+  </script>
+</body>
+</html>

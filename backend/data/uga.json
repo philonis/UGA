@@ -1,0 +1,153 @@
+{
+  "games": [
+    {
+      "name": "黑神话：悟空",
+      "steamAppId": "2358720",
+      "description": "国产动作 RPG",
+      "releaseDate": "2024-08-20",
+      "platforms": [
+        "PC",
+        "PS5"
+      ],
+      "id": 1,
+      "createdAt": "2026-03-09T00:25:25.494Z"
+    },
+    {
+      "name": "塞尔达传说：王国之泪",
+      "steamAppId": null,
+      "description": "任天堂冒险游戏",
+      "releaseDate": "2023-05-12",
+      "platforms": [
+        "Switch"
+      ],
+      "id": 2,
+      "createdAt": "2026-03-09T00:25:25.495Z"
+    },
+    {
+      "name": "博德之门 3",
+      "steamAppId": "1086940",
+      "description": "拉瑞安 RPG 巨作",
+      "releaseDate": "2023-08-03",
+      "platforms": [
+        "PC",
+        "PS5",
+        "Xbox"
+      ],
+      "id": 3,
+      "createdAt": "2026-03-09T00:25:25.495Z"
+    },
+    {
+      "name": "赛博朋克 2077",
+      "steamAppId": "1091500",
+      "description": "CDPR 开放世界",
+      "releaseDate": "2020-12-10",
+      "platforms": [
+        "PC",
+        "PS5",
+        "Xbox"
+      ],
+      "id": 4,
+      "createdAt": "2026-03-09T00:25:25.495Z"
+    }
+  ],
+  "scores": [
+    {
+      "gameId": 1,
+      "type": "media",
+      "source": "媒体 A",
+      "score": 85,
+      "id": 1,
+      "createdAt": "2026-03-09T00:25:25.495Z"
+    },
+    {
+      "gameId": 1,
+      "type": "kol",
+      "source": "KOL B",
+      "score": 88,
+      "id": 2,
+      "createdAt": "2026-03-09T00:25:25.495Z"
+    },
+    {
+      "gameId": 1,
+      "type": "overseas",
+      "source": "IGN",
+      "score": 82,
+      "id": 3,
+      "createdAt": "2026-03-09T00:25:25.495Z"
+    },
+    {
+      "gameId": 2,
+      "type": "media",
+      "source": "媒体 A",
+      "score": 86,
+      "id": 4,
+      "createdAt": "2026-03-09T00:25:25.495Z"
+    },
+    {
+      "gameId": 2,
+      "type": "kol",
+      "source": "KOL B",
+      "score": 89,
+      "id": 5,
+      "createdAt": "2026-03-09T00:25:25.495Z"
+    },
+    {
+      "gameId": 2,
+      "type": "overseas",
+      "source": "IGN",
+      "score": 83,
+      "id": 6,
+      "createdAt": "2026-03-09T00:25:25.496Z"
+    },
+    {
+      "gameId": 3,
+      "type": "media",
+      "source": "媒体 A",
+      "score": 87,
+      "id": 7,
+      "createdAt": "2026-03-09T00:25:25.496Z"
+    },
+    {
+      "gameId": 3,
+      "type": "kol",
+      "source": "KOL B",
+      "score": 90,
+      "id": 8,
+      "createdAt": "2026-03-09T00:25:25.496Z"
+    },
+    {
+      "gameId": 3,
+      "type": "overseas",
+      "source": "IGN",
+      "score": 84,
+      "id": 9,
+      "createdAt": "2026-03-09T00:25:25.496Z"
+    },
+    {
+      "gameId": 4,
+      "type": "media",
+      "source": "媒体 A",
+      "score": 88,
+      "id": 10,
+      "createdAt": "2026-03-09T00:25:25.496Z"
+    },
+    {
+      "gameId": 4,
+      "type": "kol",
+      "source": "KOL B",
+      "score": 91,
+      "id": 11,
+      "createdAt": "2026-03-09T00:25:25.496Z"
+    },
+    {
+      "gameId": 4,
+      "type": "overseas",
+      "source": "IGN",
+      "score": 85,
+      "id": 12,
+      "createdAt": "2026-03-09T00:25:25.496Z"
+    }
+  ],
+  "ugaAwards": [],
+  "lifecycleTracking": []
+}
