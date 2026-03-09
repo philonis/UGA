@@ -8,22 +8,26 @@ https://gao-lab.github.io/UGA/
 
 ## 🚀 本地开发
 
-```bash
-# 前端
-cd frontend/public
-python3 -m http.server 8080
 
-# 后端
-cd backend
-npm install
-npm run dev
-```
+added 1 package in 379ms
+
+29 packages are looking for funding
+  run `npm fund` for details
+
+> uga-frontend@0.1.0 dev
+> next dev
+
+   ▲ Next.js 14.1.0
+   - Local:        http://localhost:3000
+
+ ✓ Ready in 898ms
+[?25h
 
 ## 📄 页面
 
-- 首页：`/index-pro.html`
-- 发售表：`/release.html`
-- UGA 大奖：`/uga-awards.html`
+- 首页：
+- 发售表：
+- UGA 大奖：
 
 ## 🛠️ 技术栈
 
