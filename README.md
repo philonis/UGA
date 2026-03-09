@@ -1,44 +1,36 @@
 # UGA 游戏评分网站
 
-游戏全生命周期追踪评价平台 - 网站版行业白皮书
+游戏全生命周期追踪评价平台
 
-## 项目结构
+## 🌐 在线预览
 
-```
-UGA/
-├── frontend/          # 前端 (Next.js + React)
-├── backend/           # 后端 (Node.js + Express)
-└── docs/              # 文档
-```
+https://gao-lab.github.io/UGA/
 
-## 一期功能
-
-- [ ] 首页（热门游戏、发售表、UGA 颁奖）
-- [ ] 游戏评分页（媒体/KOL/海外评分聚合）
-- [ ] Steam 数据抓取
-- [ ] 评测聚合展示
-- [ ] UGA 评选标识
-
-## 技术栈
-
-| 模块 | 技术 |
-|------|------|
-| 前端 | Next.js 14 + React + TailwindCSS |
-| 后端 | Node.js + Express |
-| 数据库 | SQLite (开发) / PostgreSQL (生产) |
-| 爬虫 | Puppeteer + Cheerio |
-
-## 快速开始
+## 🚀 本地开发
 
 ```bash
 # 前端
-cd frontend && npm install && npm run dev
+cd frontend/public
+python3 -m http.server 8080
 
 # 后端
-cd backend && npm install && npm run dev
+cd backend
+npm install
+npm run dev
 ```
 
-## 参考
+## 📄 页面
 
-- Metacritic: https://www.metacritic.com/
-- IMDb: https://www.imdb.com/
+- 首页：`/index-pro.html`
+- 发售表：`/release.html`
+- UGA 大奖：`/uga-awards.html`
+
+## 🛠️ 技术栈
+
+- 前端：HTML + TailwindCSS
+- 后端：Node.js + Express
+- 数据库：JSON（开发）/ PostgreSQL（生产）
+
+---
+
+© 2025 UGA.ARCHIVE
